@@ -1,0 +1,57 @@
+
+////
+Preface sections must include [.preface] attribute
+in order to get them placed in the preface area (and not in the main content).
+
+Keywords specified in document preamble will display in this area
+after the abstract
+////
+
+[.preface]
+== Abstract
+
+The subject of this Discussion Paper is a code sprint that was held on November 18 and 19, 2024 in Sydney, Australia and virtually online, to advance the support and development of open standards within the developer community. It was organized by the GeoDCAT Standards Working Group (SWG) and Metadata & Catalogues Domain Working Group (DWG) of the OGC and members of the ISO TC/211. The University of New South Wales (UNSW) Sydney provided a hosting space in their Anita B. Lawrence Centre, with much appreciation. This code sprint coincided with the ISO TC211 Plenary meetings with the intention to focus on implementations of various OGC and ISO metadata standards using the OGC API family of Standards, as well as the GeoDCAT semantic model for dataset descriptions. A pre-event webinar was held on 24 October 2024 to review proposals and use cases.
+
+[.preface]
+== Summary
+
+The focus of this Discussion Paper is the findings from a code sprint and discussions that was held on November 18 and 19, 2024 in Sydney, Australia and virtually online, to advance the support and development of open standards within the developer community. It was sponsored by AURIN (the Australian Urban Research Information Network), and SURROUND Australia (catering), and was organized by the GeoDCAT Standards Working Group (SWG) and Metadata & Catalogues Domain Working Group (DWG). This code sprint coincided with the ISO TC211 Plenary meetings with the intention to focus on implementations of various OGC and ISO metadata standards using the OGC API family of Standards, as well as the GeoDCAT semantic model for dataset descriptions. A pre-event webinar was held on 24 October 2024 to review proposals and use cases.  For more information on the Sprint, including objectives, agenda, and registration, visit the November 2024 OGC Metadata Code Sprint wiki page on GitHub ( https://github.com/opengeospatial/GeoDCAT-SWG/wiki/OGC-Metadata-Codesprint-2024-%E2%80%90-Sydney ). Information on other OGC Sprints or events for developers can be found on the OGC Developer Events wiki on GitHub.
+
+The Metadata Code Sprint was planned to have a primary focus on the following group of tools, APIs and encodings:
+
+OGC GeoDCAT  – (under development) a spatio-temporal profile of the W3C DCAT Recommendation DCAT, and provide guidance about its use and further specialization. OGC GeoDCAT is inspired by the GeoDCAT-AP specification but defines just the internationally relevant concepts to allow wider application. The key areas to consider are around the expression of place and time, such as GeoDCAT-AP properties-for-location
+
+OGC API – Records provides a way to browse or search a curated collection of records of geospatial resources, known as a catalog. A record makes a resource discoverable by providing summary information (e.g. metadata) about the geospatial resource.
+
+ISO 19115 Standards define the schema required for describing geographic information and services by means of metadata. Of particular interest will be recent developments on JSON encodings provided by ISO 19115-4.
+
+STAC provides a common structure for describing and cataloging spatiotemporal assets. A spatiotemporal asset is any file that represents information about the earth captured in a certain space and time.
+
+Other metadata standards, such as CDIF, EML, and Local Context may be included where the use of these have important implications on the utility of geospatial metadata.
+
+Particular focus will be placed on use of OGC modular “building blocks for location” that address both simple and the most complex use-cases.
+
+== Acknowledgements
+
+OGC thanks the following organisations for material support for this codesprint:
+
+- [University of NSW School of the Built Environment, Geospatial Research Innovation Development (UNSW GRID)](https://www.unsw.edu.au/arts-design-architecture/our-schools/built-environment/our-research/clusters-groups/grid) for the venue and logistics.
+- [AURIN](https://aurin.org.au/) and [SURROUND Australia](https://surroundaustralia.com/) for catering.
+
+== Submitters
+
+All questions regarding this document should be directed to the editors or the contributors:
+
+[%unnumbered%]
+.Submitters
+[options="header"]
+|===
+|	Name | Organization | Role
+|	Rob Atkinson| OGC | Editor
+|	Byron Cochrane | Openworks |Editor
+|	David Stolarz | ASPRS | Contributor
+|	Peter Parslow | ISO TC 211 | Contributor
+|	Ivana Ivanova | Curtin University | Contributor
+|	Panagiotis (Peter) A. Vretanos | CubeWerx Inc. | Contributor
+| to be completed... || All other contributors
+|===

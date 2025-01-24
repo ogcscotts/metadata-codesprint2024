@@ -1,0 +1,26 @@
+[[iso19115_discussion]]
+
+==== ISO 19115 DCAT mapping
+
+* Publish a conceptual mapping from ISO 19115-1:2014 to DCAT, preferably OGC GeoDCAT
+* Recommendation is to use PROV as a vocabulary for encoding ‘lineage’ within a DCAT context
+* This should be as lossless as possible
+* It should state preferred choices where there are several possibilities
+* As well as a ‘concept to concept’ mapping, there need to be some instructions on restructuring e.g. when to put resource constraints on the DCAT dataset and when to put them on the DCAT distribution.
+* Consider publishing this mapping in a machine readable way, perhaps on the OGC incubator
+
+On the last point, it was noted that OGC has developed an approach to publish mappings from JSON to RDF models - by mapping JSON schemas to JSON-LD, and via the URI identifiers to RDF models.
+
+Work is underway to support mapping OGC API Records and STAC to GeoDCAT - this can be applied to ISO 19115-4 JSON encoding, and can be co-designed with it to minimise the friction between schema patterns and conceptual mappings.
+
+==== FAIR metadata mappings
+
+Examples from the mapping of OGC API Records to DCAT were shown, highlighting the additional challenges when schemas use labels for elements with different semantics to the target conceptual model.
+
+For example it was shown that the "language" element in OGC API records refers to the language of the record, however DCAT uses the Dublin Core property "dct:language" which references the language of the resource described by the record.
+
+It is thus essential that metadata standards have explicit mappings published with good examples to meet FAIR requirements, and investment in machine readable mappings will be required to allow these nuanced relationships to be clearly identified.
+
+The following quote neatly sums up this from the perspectice of one participant: _"A formal mapping is indeed very welcome! Our customers often start doing their own mapping validation exercise. Which is not very productive"_
+
+

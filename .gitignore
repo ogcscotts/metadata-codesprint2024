@@ -1,0 +1,7 @@
+.DS_Store
+.swp
+.tmp.xml
+.idea/*
+
+# Deploy key
+deploy_key

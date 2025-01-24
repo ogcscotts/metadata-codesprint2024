@@ -1,0 +1,25 @@
+[[results_pygeoapi]]
+==== OSGeo pygeoapi
+
+===== Extension of Records with PROV using pygeo templates
+
+pygeoapi's template system was extended to support provenance traces.
+
+Provenance metadata is naturally is a directed acyclic graph (DAG) of arbitrary depth and detail.
+
+A simple catalog test case was established using the provenance model and the schema from https://ogcincubator.github.io/bblock-prov-schema/bblock/ogc.ogc-utils.prov.
+
+A generalised provenance rendering template was then referenced when rendering a standardised property (_provenance_) configured to understand the high level abstract typing of Entity, Activity and Agent, and recursively nest content. (https://github.com/MarkusWilhelmJahn/pygeoapi/blob/master/CODESPRINT/prov_recursive.html)
+
+This successfully presented such a provenance graph as shown:
+
+.Rendering an embedded, standard provenance schema in OGC API Record
+image::images/pygeoapi-prov.png[align="center"]
+
+This has three significant implications for considering metadata standardisation:
+
+. A rich provenance model can be handled with current reference implementation software and hence there is no substantial technical barrier
+. Well-known metadata extensions can be supported using well-known attachment properties, which will be necessary for each object type (record, feature etc)
+. Well-known schemas will be required to to allow predictable behaviour given the inherent complexity of some types of metadata.
+
+It is also worth noting that a scalable solution will probably require more dynamic UI filtering, and can load referenced objects that are not directly embedded in the results.

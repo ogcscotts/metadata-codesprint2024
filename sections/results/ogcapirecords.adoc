@@ -1,0 +1,16 @@
+[[results_ogcapirecords]]
+==== OGC API - Records and Provenance
+
+Experimentation related to OGC API - Records included extension of pygeoapi to enable support for including Provenance details in Records. (Note the previous codesprint has explored capture of provenance in OGC API Processes).
+
+The provenance model used is based on the W3C provenance model and a [draft "Building Block" that defines a JSON schema and a mapping directly to PROV using JSON-LD](https://ogcincubator.github.io/bblock-prov-schema/bblock/ogc.ogc-utils.prov).
+
+Several experiments were undertaken, with generation of a provenance chain from AI based workflows successfully demonstrated, and rendering of such content in Records "Landing Pages" successfully demonstrated. A detailed summary is presented in <<results_pygeoapi>>.
+
+==== OGC API - Records and GeoDCAT
+
+Some challenges were highlighted, with reference to mapping the JSON schema of OGC API Records (RecordJSON) to DCAT, including similar element names with different semantics and the need to model the structure of Records.
+
+Even though little was done to progress testing this mapping further, a significant finding is that no alternative approach to machine readable mappings was identified by any participant, though the consensus was that _some_ machine readable FAIR mapping was necessary.
+
+TBD- feedback from Conterra - was any progress made?

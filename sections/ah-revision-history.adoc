@@ -1,0 +1,15 @@
+
+[appendix,obligation="informative"]
+== Revision History
+
+// Insert revision history
+// Structure
+[%unnumbered%]
+.Revision History
+[width="90%",options="header"]
+|===
+|Date |Release |Author | Primary clauses modified |Description
+|2024-11-19 |0.1 |D. Stolarz |all |capture scope discussions
+|2024-12-04 |0.2 |R. Atkinson |all |Initial version
+|2025-01-06 |0.3 |R. Atkinson |all |Reformat to OGC Discussion Paper
+|===

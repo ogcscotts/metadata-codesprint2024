@@ -1,0 +1,16 @@
+[[discussion]]
+== Discussion
+
+include::discussion/metadata_framework.adoc[]
+
+include::discussion/iso19115-4.adoc[]
+
+include::discussion/records_prov_discussion.adoc[]
+
+
+//include::discussion/ogcapi_standards_discussion.adoc[]
+
+
+
+
+

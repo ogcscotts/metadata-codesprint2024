@@ -1,0 +1,22 @@
+[[results]]
+== Results
+
+The code sprint included multiple software applications and experimented with several standards. This section presents the key results from the code sprint.
+
+=== Metadata standards alignment
+
+include::results/metadata_framework.adoc[]
+
+=== Approved OGC Standards
+
+=== Candidate OGC Standards
+
+include::results/ogcapirecords.adoc[]
+
+=== Common Patterns
+
+include::results/xai.adoc[]
+
+=== Software Projects and Products
+
+include::results/pygeoapi.adoc[]

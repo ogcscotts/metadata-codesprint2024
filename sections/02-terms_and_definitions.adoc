@@ -1,0 +1,106 @@
+
+== Terms and definitions
+
+=== API
+
+An Application Programming Interface (API) is a standard set of documented and supported functions and procedures that expose the capabilities or data of an operating system, application, or service to other applications (adapted from ISO/IEC TR 13066-2:2016).
+
+=== Coordinate Reference System
+
+A coordinate system that is related to the real world by a datum term name (source: ISO 19111).
+
+=== Directed Acyclic Graph
+
+a type of graph in mathematics and computer science that represents a conceptual or mathematical model of a data pipeline, embodying a series of activities in a specific arrangement in which data flows through a finite set of nodes connected by edges. Notably, these graphs lack a designated start or end node and prevent data from looping back to its point of origin. Their popularity in data engineering stems from their clear depiction of Data Lineage and their suitability for functional approaches, ensuring idempotency in restarting pipelines without side effects. https://www.ssp.sh/brain/dag/
+
+=== Docker
+
+an open-source project that automates the deployment of applications as movable, independent containers 
+
+=== F-UJI
+
+a web service to programmatically assess FAIRness of research data objects at the dataset level based on the FAIRsFAIR Data Object Assessment Metrics. https://fair-impact.eu/
+
+=== GeoJSON
+
+a format for encoding collections of simple geographical features along with their non-spatial attributes using JSON
+
+=== JSON-LD
+
+A JSON-based Serialization for Linked Data
+
+=== OpenAPI Document
+
+A document (or set of documents) that defines or describes an API. An OpenAPI definition uses and conforms to the OpenAPI Specification (https://www.openapis.org).
+
+=== Ontology
+
+formal representation of phenomena of a universe of discourse with an underlying vocabulary including definitions and axioms that make the intended meaning explicit and describe phenomena and their interrelationships.
+
+=== Profile
+
+set of one or more base standards or subsets of base standards, and, where applicable, the identification of chosen clauses, classes, options and parameters of those base standards, that are necessary for accomplishing a particular function.  Note: A profile is derived from base standards so that by definition, conformance to a profile is conformance to the base standards from which it is derived.
+
+=== PROV 
+
+Provenance - in terms of a family of documents that defines a model, corresponding serializations and other supporting definitions to enable the inter-operable interchange of provenance information in heterogeneous environments, via W3C.
+
+=== pyGeo
+
+a geometry manipulation framework for multidisciplinary design optimization
+
+=== Schema
+
+formal description of a model
+
+==== Semantic Web
+
+Web of data with meaning. Note: The association of meaning allows data and information to be understood and processed by automated tools as well as by people.
+
+=== Web API
+
+An API using an architectural style that is founded on the technologies of the Web [source: OGC API - Features - Part 1: Core].
+
+
+=== Abbreviated terms
+
+API:: Application Programming Interface
+AURIN:: Australian Urban Research Infrastructure Network 
+BFO:: Basic Framework Ontology
+CARE:: Collective benefit, Authority, Responsibility to control, Ethical behaviors
+CITE:: Compliance Interoperability & Testing Evaluation
+CRS:: Coordinate Reference System
+DAG:: Directed Acyclic Graph
+DOI:: Digital Object Identifier
+DCAT:: Data Catalog Vocabulary
+DWG:: Domain Working Group
+EDR:: Environmental Data Retrieval
+FAIR:: Findability, Accessibility, Interoperability, and Reusability
+GeoDCAT:: a spatio-temporal profile of the W3C DCAT Recommendation
+GIS:: Geographic Information System
+GN:: GeoNetwork
+JSON:: JavaScript Object Notation
+ICSM:: Intergovernmental Committee on Surveying and Mapping
+ISO:: International Organization for Standardization
+NCRIS:: National Collaborative Research Infrastructure Strategy
+NFDI:: National Research Data infrastructure
+OGC:: Open Geospatial Consortium
+ORCID:: Open Researcher and Contributor ID
+OWL:: Web Ontology Language
+OWS:: OGC Web Services
+PROV:: Provenance family of documents
+PROV-O:: PROV Ontology
+RDF:: Resource Description Framework
+REST:: Representational State Transfer
+SHACL:: Shapes Constraint Language
+STAC:: Spatial Temporal Asset Catalog
+SWG:: Standards Working Group
+TC 211:: ISO Technical Committee 211 - Geographic information/Geomatics
+TEAM:: Test, Evaluation, And Measurement Engine
+UML:: Unified Modeling Language
+URI:: Uniform Resource Identifier
+URL:: Uniform Resource Locator
+W3C:: World Wide Web Consortium 
+WG:: Working Group
+XSLT:: Extensible Stylesheet Language Transformations
+

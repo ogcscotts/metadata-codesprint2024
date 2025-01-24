@@ -1,0 +1,50 @@
+<bibdata type="standard" schema-version="v1.2.9">
+  <fetched>2025-01-06</fetched>
+  <title type="title-intro" format="text/plain" language="en" script="Latn">OGC API</title>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Features</title>
+  <title type="title-part" format="text/plain" language="en" script="Latn">Part 2: Coordinate Reference Systems by Reference corrigendum</title>
+  <title type="main" format="text/plain" language="en" script="Latn">OGC API - Features - Part 2: Coordinate Reference Systems by Reference corrigendum</title>
+  <uri type="src">http://www.opengis.net/doc/IS/ogcapi-features-2/1.0.1</uri>
+  <uri type="obp">https://docs.opengeospatial.org/is/18-058r1/18-058r1.html</uri>
+  <docidentifier type="OGC" primary="true">18-058r1</docidentifier>
+  <date type="published">
+    <on>2022-05-11</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Clemens Portele</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Panagiotis (Peter) A. Vretanos</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Open Geospatial Consortium</name>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">OGC API standards define modular API building blocks to spatially enable Web APIs in a consistent way. The OpenAPI specification is used to define the API building blocks.
+
+OGC API Features provides API building blocks to create, modify and query features on the Web. OGC API Features is comprised of multiple parts, each of them is a separate standard.
+
+This part extends the core capabilities specified in Part 1: Core with the ability to use coordinate reference system identifiers other than the defaults defined in the core.</abstract>
+  <ext schema-version="v1.0.1">
+    <doctype>standard</doctype>
+    <subdoctype>implementation</subdoctype>
+    <editorialgroup>
+      <committee>technical</committee>
+    </editorialgroup>
+  </ext>
+</bibdata>

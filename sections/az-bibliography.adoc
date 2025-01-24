@@ -1,0 +1,18 @@
+
+[appendix,obligation=informative]
+[[annex_bibliography]]
+[bibliography]
+== Bibliography
+
+* [[[ISO19157-1,ISO 19157-1:2023]]]
+* [[[ISO19135-1,ISO 19135-1:2015]]]
+* [[[OGC17-069r4,OGC 17-069r4]]]
+* [[[OGC18-058r1,OGC 18-058r1]]]
+* [[[OGC19-086r6,OGC 19-086r6]]]
+* [[[OGC18-062r2,OGC 18-062r2]]]
+* [[[OGC20-057,OGC 20-057]]]
+* [[[OGC18-088,OGC 18-088]]]
+* [[[bib_iso19157_3,ISO/AWI 19157-3]]], ISO: ISO/AWI 19157-3 Geographic information - Data quality - Part 3: Data quality measures register (Draft). https://www.iso.org/standard/87032.html
+* [[[bib_ogcapidggs,OGC 21-038]]], OGC: OGC API - Discrete Global Grid Systems - Part 1: Core (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/21-038.html
+* [[[bib_ogcapirecords,OGC 20-004]]], OGC: OGC API - Records - Part 1: Core (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/20-004.html
+* [[[bib_jsonfg,OGC 21-045r1]]], OGC: OGC Features and Geometries JSON - Part 1: Core (draft),  Open Geospatial Consortium. https://docs.ogc.org/DRAFTS/21-045r1.html

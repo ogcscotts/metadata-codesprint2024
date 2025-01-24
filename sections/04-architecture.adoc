@@ -1,0 +1,62 @@
+[[architecture]]
+== High-Level Architecture
+
+As illustrated in <<img_architecture>>, the sprint architecture is somewhat loose - to identify what aspects of metadata standardisation the community considers necessary, but also to explore the commonalities and principles that can be discovered from current activities.
+
+It was not assumed that specific standards could be developed not tested thoroughly, however the general principle of extending multiple metadata standards with extensions based on common models was prioritised, with a focus on Provenance.  Provenance represents a complex challenge with a well-known conceptual model, so testing if a solution to this complex challenge can be successfully re-used provides clear direction to the problems of extending metadata standards for any specific aspects.
+
+The key *methodology* used was the testing of examples based on prior work to model a reusable JSON schema for PROV-O with a ready-to-use JSON-LD semantic mapping, thus encapsulating a complex problem to make implementation feasible. Some codesprint activities tested the feasibility of re-use of such an extension.
+
+[[img_architecture]]
+.High Level Overview of the Sprint Architecture
+image::images/architecture.png[align="center",width=1200]
+
+<<img_relationships>> illustrates some of the key metadata standards discussed and how they might relate as extension, profiles or mappings.
+
+[[img_relationships]]
+.Relationships between metadata standards, extensions and profiles
+image::images/relationships.png[align="center",width=1200]
+
+
+The rest of this section describes the software deployed, and standards implemented during the code sprint or in support of the code sprint.
+
+
+=== Approved OGC Standards
+
+include::architecture/ogcapifeatures.adoc[]
+
+// Matt Purss may have something to contribute here from prior work.
+include::architecture/ogcapiprocesses.adoc[]
+
+=== Approved ISO Standards
+
+ISO 19115-1:2014 Geographic information - Metadata - Part 1: Fundamentals
+
+Note: many in Europe still use ISO 19115:2003
+
+ISO 19115-3 Geographic information — Metadata - Part 3: XML schema implementation for fundamental concepts
+
+Note: many in Europe still use the XML encoding of ISO 19115:2003 which is in ISO/TS 19139:2007
+
+=== Candidate OGC Standards
+
+include::architecture/ogcapirecords.adoc[]
+
+=== Candidate ISO Standards
+
+The roadmap for ISO 19115-4, JSON encoding was discussed. The code sprint illustrated how modularity for such an encoding could be approached.
+
+ISO/CD 19157-3 Geographic information — Data quality - Part 3: Data quality measures register, in particular its https://defs-dev.opengis.net/vocprez-hosted/vocab/?filter=19157-3[draft implementation on the OGC Development Server]
+
+ISO/TC 211 plans to revise ISO 19115-1:2014 were discussed, particularly the plan for ISO/TC 211 to publish a DCAT mapping.
+
+=== Specifications from the Community
+
+
+=== Software Projects and Products
+
+include::architecture/pygeoapi.adoc[]
+
+
+
+

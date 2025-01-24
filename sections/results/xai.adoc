@@ -1,0 +1,174 @@
+[[results_xai]]
+==== XAI - Explainable AI
+
+Two teams explored the capture of provenance from "GeoAI" workflows.
+
+<<img_xai>> shows the target for a workflow based on the LangFlow toolkit, based on the open source Apache AirFlow tools.
+
+Within the limited time available in the codesprint it was shown that generating a provenance trace that conformed to the proposed standardised schema was achievable.  It was not feasible within the same limited time to learn and implement OGC API Processes, however another participant has demonstrated this is feasible as part of work on DGGS APIs.
+
+[[img_xai]]
+.Architecture to generate OGC API Records with Provenance from AI processes.
+image::images/xai.png[align="center",width=1200]
+
+An example of the output of one such workflow is here:
+
+[source, json]
+----
+{
+    "prov:type": "prov:Activity",
+    "generated": {
+        "id": "output",
+        "type": "Entity",
+        "AgentType": "SoftwareAgent",
+        "response": [
+            {
+                "id": "LLM Generated Code",
+                "type": "Entity",
+                "wasGeneratedBy": "gemini-1.5-pro-001",
+                "data": "gdf.to_crs(epsg=7856).set_index('name').loc['UNSW Village'].geometry.distance(gdf.to_crs(epsg=7856)[gdf.amenity == 'hospital'].geometry).min()"
+            },
+            {
+                "id": "Code Output",
+                "type": "Entity",
+                "data": "511.8048618048641"
+            },
+            {
+                "id": "Final Output",
+                "type": "Entity",
+                "wasGeneratedBy": "gemini-1.5-flash-001",
+                "data": "The closest hospital to UNSW Village is approximately 512 meters away."
+            }
+        ]
+    },
+    "startedAtTime": "2024-11-19T05:07:22.927913Z",
+    "endedAtTime": "2024-11-19T05:07:34.304708Z",
+    "used": [
+        {
+            "id": "file",
+            "type": "Entity",
+            "AgentType": "Person",
+            "data": [
+                {
+                    "id": "osmdata.shp",
+                    "type": "Entity",
+                    "records": 3544
+                }
+            ]
+        },
+        {
+            "id": "user_input",
+            "type": "Entity",
+            "input": "How far away is the closest hospital from UNSW village"
+        }
+    ]
+}
+----
+
+Note that further work is required to characterise the ad-hoc "data" as persisted data sets, described using OGC API Records schemas. The main challenge in this case is establishment of persistent identifiers, however the schema supports such ad-hoc inline content options.
+
+==== Semantic spatial data enrichment
+
+One team explored transparent mechanisms for annotating spatial data with metadata information as part of a semantic enrichment pipeline. 
+
+The team selected the creation of an up-to-date placenames knowledge graph for Australia as our case study, using the [placenames ontology](https://geoscienceaustralia.github.io/Placenames-Ontology/placenames.html) and the 2017 [FSDF placenames project](https://placenames.fsdf.org.au/) as inspiration. The approach can be thought of as an update of the Australian FSDF placenames project. Using [RML](https://rml.io/) (RDF Mapping Language) the team created RML mappings for each state from JSON and CSV gazetteer data, following rules set out in the placename ontology. 
+
+The results demonstrated the potential for RML can be used to support transparent uplift of data with standards-based as an integral part of the semantic data enrichment pipeline. The key advantage of RML as a tool for this purpose is it enables the definition of sophisticated and standards-based logic for enrichment, separated from the mechanism for enrichment.  
+
+A fragment of the RML generated for enriching South Australia geojson gazetteer data with metadata is below. Similar mappings were generated for all Australian states and territories. 
+
+[source, ttl]
+----
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix fsdf: <http://linked.data.gov.au/def/fsdf/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+... 
+
+<#SA_GazetteerSites2020_DS>
+  rml:source "./SA/SA_sampleGazetteerSites_GDA2020.geojson" ;
+  rml:referenceFormulation ql:JSONPath ;
+  rml:iterator "$".
+
+<#SA_GeoFeatures_GazetteerSites2020_DS>
+  rml:source "./SA/SA_sampleGazetteerSites_GDA2020.geojson" ;
+  rml:referenceFormulation ql:JSONPath ;
+  rml:iterator "$.features[*]".
+
+## CSV with Geometry in WKT
+<#SA_SitesSource> a rml:LogicalSource ;
+    rml:source "./SA/sites.csv" ;
+    rml:referenceFormulation ql:CSV ;
+    rml:iterator "$" .
+
+## CSV with metadata for SA
+<#SA_SitesMetaDataSource> a rml:LogicalSource ;
+    rml:source "./meta_data_SA.csv" ;
+    rml:referenceFormulation ql:CSV ;
+    rml:iterator "$" .
+
+################################## MetaData Mapping ##################################
+<#MetaDataMapping> a rr:TriplesMap;
+   rml:logicalSource <#SA_SitesMetaDataSource>;
+
+rr:subjectMap [
+    rr:template "http://example.com/{State}/MetaData/ds_{DatasetNumber}";
+    rr:class dcat:DataSet;
+  ];
+  
+ rr:predicateObjectMap [
+    rr:predicate dcterms:identifier;
+    rr:objectMap [
+      rml:reference "DatasetNumber"
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:title;
+    rr:objectMap [
+      rml:reference "Title"
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:description;
+    rr:objectMap [
+      rml:reference "Description"
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate fsdf:hasCustodian;
+    rr:objectMap [
+       rr:parentTriplesMap <#MetaDataCustodianMapping> ;  
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:issued;
+    rr:objectMap [
+      rml:reference "DatasetAcquiredOn";
+      rr:datatype xsd:date
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:licence;
+    rr:objectMap [
+      rml:reference "licence";
+      rr:datatype xsd:string
+    ]
+  ];
+
+ rr:predicateObjectMap [
+    rr:predicate dcterms:publisher;
+    rr:objectMap [
+      rml:reference "Publisher";
+      rr:datatype xsd:string
+    ]
+  ];
+
+...
+
+----

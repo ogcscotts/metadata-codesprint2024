@@ -1,0 +1,48 @@
+[[metadata_framework]]
+
+==== Metadata in motion
+
+The workshop discussion agreed on the following principles which help inform metadata interoperability requirements:
+
+- Metadata is best captured at source
+- Systems therefore have a need to ingest and pass on metadata from source to output, inline or by reference
+- Metadata should preserve canonical references
+- schemas must be available for the metadata elements being passed
+- description of those schemas are necessary, ideally as machine-readable semantics
+- this pattern of encapsulating metadata and references is well-known as a "provenance chain"
+- Provenenance chains will exhibit a DAG (Directed Acyclic Graph) as the same nodes may appear in multiple places
+- Schemas etc for a DAG pattern are not trivial, hence it is critical to *encapsulate* a good design and make it available for *reuse*.
+
+In line with these principles, several activities focussed on the potential reusability of a PROV model using a formalised JSON schema. See <<records_prov_discussion>>
+
+==== A framework for developing metadata standards
+
+It is commonly understood that *profiles* are necessary to implement a general metadata standard in the context of a specific application domain or community of practice.
+
+The description and management of such profiles is however highly variable in implementation practice.
+
+One key pattern is the *"Core + extensions"* model - characterised by the OGC ModSpec (https://www.ogc.org/standards/modularspec[OGC 08-131r3]), and implemented in various forms including:
+
+- STAC extensions
+- DCAT profiles published for use in EU Portals
+- ISO 19115-Part 2,3, etc
+
+In addition, metadata elements defined by different profiles may be combined (*composition*)
+
+Finally, metadata specifications may be model and composed, but *bundled* into a single form for implementation convenience - such as JSON schema for OpenAPI 3.0 (3.1 does not require this as it follows more modern JSON schema)
+
+And, since many systems have their own technology base, and metadata to describe re-use means legacy systems will be the source of much metadata, not single solution will hold universal sway, hence the *mappings* between standards will be a common concern.
+
+This results in a simple architectural framework for understanding the scope of different metadata standardisation activities.
+
+.Metadata Standardisation Patterns
+image::images/metadata_patterns.png[align="center"]
+
+Note that mappings themselves relate to the different ways metadata standards are defined - in that mappings for core and extensions, or restricted profiles can be *composed* into a complete mapping, and *bundled* into some executable form.
+
+The bundling of JSON-LD contexts supported by the OGC Building Block Register represents evidence that these patterns are inevitable, complex, but feasible if a level of standardisation is imposed on the standards themselves. This may be in the form of FAIR machine readable descriptions of available standards, noting the requirement to transparently reference the authoritative standard being described.
+
+==== Key Recommendations
+
+- Explore alignment of metadata standards and development approaches using the framework to identify common approaches to different aspects where possible
+- publish mappings between metadata standards in a FAIR way.
