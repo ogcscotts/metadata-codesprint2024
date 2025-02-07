@@ -35,7 +35,7 @@ jobs:
           key: metanorma-ietf-workgroup-cache
           restore-keys: metanorma-ietf-workgroup-cache
 
-      - uses: metanorma/metanorma-build-scripts/gh-rubygems-setup-action@master
+      - uses: metanorma/metanorma-build-scripts/gh-rubygems-setup-action@main
         with:
           token: ${{ secrets.METANORMA_CI_PAT_TOKEN }}
 
