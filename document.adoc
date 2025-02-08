@@ -28,7 +28,7 @@
 Make sure to complete each included document
 ////
 // Clauses
-include::sections/00-preface.adoc[]
+// include::sections/00-preface.adoc[]
 
 include::sections/01-scope.adoc[]
 
