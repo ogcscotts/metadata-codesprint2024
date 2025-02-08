@@ -26,9 +26,6 @@ jobs:
         with:
           submodules: true
 
-      - name: Setup Metanorma toolchain
-        uses: actions-mn/setup@main
-        
       - name: Metanorma generate site
         uses: actions-mn/build-and-publish@v2
         with:
