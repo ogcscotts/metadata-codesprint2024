@@ -1,13 +1,13 @@
 [[metadata_framework_discussion]]
 
-==== ISO 19115-4
+=== ISO 19115-4
 
 The draft project plan for ISO 19115-4 (JSON encoding) and revisions to 19115-1 was presented and feedback solicited.
 
 The issue of modular implementation was discussed.  Of particular relevance to the code sprint was the statement "Recommendation is to use PROV as a vocabulary for encoding ‘lineage’ within a DCAT context
 ".  The codesprint undertook several experiments to validate the feasibility of this from the perspective of re-use of a draft JSON schema that is compatible with GeoJSON Features and OGC API Records, and supports a FAIR mapping to DCAT.
 
-==== Identification of common patterns and challenges
+=== Identification of common patterns and challenges
 
 As a result of discussion of various aspects of various metadata standards being examined by participants during the codesprint, a "framework" for characterising the common patterns being observed was developed. This is described in detail in the results <<metadata_framework>>, since the consensus reached around this understanding represents a significant outcome of the codesprint, and a theory that can be systematically tested and operationalised in terms of future efforts to support standards application and alignments.
 

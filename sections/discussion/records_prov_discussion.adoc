@@ -1,6 +1,6 @@
 [[records_prov_discussion]]
 
-==== Describing Provenance with OGC API Records
+=== Describing Provenance with OGC API Records
 
 OGC has been exploring the use of reusable building blocks to enable elements of standards to be re-used, extended, and modified with a FAIR (Findable, Accessible, Interoperable, Reusable) way. A focus of this code sprint was around extension of various standards to include provenance information.
 

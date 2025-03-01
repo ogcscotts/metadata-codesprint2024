@@ -1,6 +1,8 @@
 [[results]]
 == Results
 
+=== Overview
+
 The code sprint included multiple software applications and experimented with several standards. This section presents the key results from the code sprint.
 
 === Metadata standards alignment

@@ -1,5 +1,5 @@
 <bibdata type="standard" schema-version="v1.2.9">
-  <fetched>2025-03-01</fetched>
+  <fetched>2025-01-06</fetched>
   <title type="title-intro" format="text/plain" language="en" script="Latn">Geographic information</title>
   <title type="title-main" format="text/plain" language="en" script="Latn">Data quality</title>
   <title type="title-part" format="text/plain" language="en" script="Latn">Part 1: General requirements</title>
@@ -71,17 +71,4 @@ Le présent document n’a pas vocation à définir des niveaux minimums accepta
     </bibitem>
   </relation>
   <place>Geneva</place>
-  <ext schema-version="v1.0.3">
-    <doctype>international-standard</doctype>
-    <editorialgroup>
-      <technical-committee number="211" type="TC" identifier="ISO/TC 211">Geographic information/Geomatics</technical-committee>
-    </editorialgroup>
-    <ics>
-      <code>35.240.70</code>
-      <text>IT applications in science</text>
-    </ics>
-    <structuredidentifier type="ISO">
-      <project-number>78900</project-number>
-    </structuredidentifier>
-  </ext>
 </bibdata>

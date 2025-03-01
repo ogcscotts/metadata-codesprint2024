@@ -1,6 +1,8 @@
 [[conclusions]]
 == Conclusions
 
+=== Overview
+
 The code sprint provided a significant opportunity to highlight the heterogeneous nature of metadata standards and perspectives from multiple stakeholders.  As a result it was possible to articulate a coherent framework for understanding scope of different activities and a propose a coherent architecture to guide ongoing work in metadata standards.
 
 In addition, progress was made on a number of specific activities, providing a validation that the proposed framework can be progressed incrementally, without it being necessary for all participants to fully engage with all the diverse aspects of metadata standardisation. The general principles of improving FAIR-ness of metadata standards, whilst supporting multiple existing and emerging communities
