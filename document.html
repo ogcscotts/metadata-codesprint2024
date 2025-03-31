@@ -1937,11 +1937,11 @@ pre.sourcecode .nt {
 
 <p id="_45e4c9b9-562f-aa97-0f4e-589afde10aac">The following concept was submitted by AURIN, as an e-Research infrastructure provider.</p>
 
-<p id="_e75cc0fa-470d-f8b8-65d8-6ec9f1143c26">_As systems become more complicated, and a system of systems approach becomes the norm rather than the dream, it’s important that datasets and containerised analytics to be able declare, trust, and verify that data meets certain assertions and standards. AURIN has been contemplating an idea for building a Data Format and Validation Registry, first internally and then externally, that would mix persistent identifiers, human readable data assertions, and machine readable and executable assertions on data formats to add an automated “trust, with verification” layer to their data/analytics ecosystem.</p>
+<p id="_e75cc0fa-470d-f8b8-65d8-6ec9f1143c26">As systems become more complicated, and a system of systems approach becomes the norm rather than the dream, it’s important that datasets and containerised analytics to be able declare, trust, and verify that data meets certain assertions and standards. AURIN has been contemplating an idea for building a Data Format and Validation Registry, first internally and then externally, that would mix persistent identifiers, human readable data assertions, and machine readable and executable assertions on data formats to add an automated “trust, with verification” layer to their data/analytics ecosystem.</p>
 
 <p id="_2eed29f9-8dc2-3107-1846-ae3901348eb8">The basic sketch would be to have a minted persistent identifier (similar to a DOI or an ORCID) of a description that links to a human readable and machine readable page describing what this data format is and what assertions data would have to meet to be considered valid. A preliminary prototype of the service could have a sort of standard DOI type link that would resolve to a page with human readable metadata about the data format, and then validation scripts or attached assertions in a validation language, such as Great Expectations, or similar.</p>
 
-<p id="_9fac8739-30bc-0daf-f234-9b1dbe44b66a">The challenge, beyond vetting the approach is to think about what metadata should be provided on the other end of that “format persistent identifier” link that would allow for a service to independently and automatically verify that a dataset complies with the standard it claims to adhere to._</p>
+<p id="_9fac8739-30bc-0daf-f234-9b1dbe44b66a">The challenge, beyond vetting the approach is to think about what metadata should be provided on the other end of that “format persistent identifier” link that would allow for a service to independently and automatically verify that a dataset complies with the standard it claims to adhere to.</p>
 
 <p id="_0dffca50-b18f-21a8-8ddf-dccacebd29f6">This challenge is open-ended to an extent, however the <a href="#metadata_framework">Clause 4.2.1</a> articulated during the code sprint provides a basis for designing such a metadata capability in a scalable, sustainable fashion using fit-for-purpose standardised components.  The completed exercises using Provenance as such a component highlight the feasibility of having semantically rich components combined with OGC and ISO “base” standards.</p>
 </div></div><div id="architecture"><h1 id="_f3697fe0-5524-40b6-94c6-e04cb57ecd6a"><a class="anchor" href="#architecture"></a><a class="header" href="#architecture">3.  High-Level Architecture</a></h1><div id="_overview"><h2 id="_e37b7ebe-82eb-49c3-a90a-63fe77781ae4"><a class="anchor" href="#_overview"></a><a class="header" href="#_overview">3.1.  Overview</a></h2>
@@ -2015,21 +2015,21 @@ pre.sourcecode .nt {
 
 <p id="_fbb4af5f-9b27-ad02-f2bf-ee5078fcbe33">The workshop discussion agreed on the following principles which help inform metadata interoperability requirements:</p>
 
-<div class="ul_wrap"><ul id="_dfc2c417-958e-88ad-27f4-1c50a915f571"><li><p id="_f027296b-a512-2cf9-cadc-50504220199a">Metadata is best captured at source</p>
+<div class="ul_wrap"><ul id="_dfc2c417-958e-88ad-27f4-1c50a915f571"><li><p id="_f027296b-a512-2cf9-cadc-50504220199a">Metadata is best captured at source.</p>
 </li>
-<li><p id="_57865d3b-bfbb-7b5c-b751-11cbcda31176">Systems therefore have a need to ingest and pass on metadata from source to output, inline or by reference</p>
+<li><p id="_57865d3b-bfbb-7b5c-b751-11cbcda31176">Systems therefore have a need to ingest and pass on metadata from source to output, inline or by reference.</p>
 </li>
-<li><p id="_01716ed5-6d80-6c96-e3dc-ca18968bf785">Metadata should preserve canonical references</p>
+<li><p id="_01716ed5-6d80-6c96-e3dc-ca18968bf785">Metadata should preserve canonical references.</p>
 </li>
-<li><p id="_bbc2c089-e4ea-6bb6-e29c-03751b4da709">schemas must be available for the metadata elements being passed</p>
+<li><p id="_bbc2c089-e4ea-6bb6-e29c-03751b4da709">Schemas must be available for the metadata elements being passed.</p>
 </li>
-<li><p id="_5f0fffba-502c-5bdd-a62c-f4e9450bdac2">description of those schemas are necessary, ideally as machine-readable semantics</p>
+<li><p id="_5f0fffba-502c-5bdd-a62c-f4e9450bdac2">Description of those schemas are necessary, ideally as machine-readable semantics.</p>
 </li>
-<li><p id="_e286db13-347e-7c6f-6bac-35d12c17293a">this pattern of encapsulating metadata and references is well-known as a “provenance chain”</p>
+<li><p id="_e286db13-347e-7c6f-6bac-35d12c17293a">This pattern of encapsulating metadata and references is well-known as a “provenance chain”.</p>
 </li>
-<li><p id="_749fec1b-ada5-03e7-3b39-5a6f02891327">Provenenance chains will exhibit a DAG (Directed Acyclic Graph) as the same nodes may appear in multiple places</p>
+<li><p id="_749fec1b-ada5-03e7-3b39-5a6f02891327">Provenenance chains will exhibit a DAG (Directed Acyclic Graph) as the same nodes may appear in multiple places.</p>
 </li>
-<li><p id="_5ee569be-b90d-aeb3-e729-e672ad0e83cf">Schemas etc for a DAG pattern are not trivial, hence it is critical to <b>encapsulate</b> a good design and make it available for <b>reuse</b>.</p>
+<li><p id="_5ee569be-b90d-aeb3-e729-e672ad0e83cf">Schemas etc. for a DAG pattern are not trivial, hence it is critical to <b>encapsulate</b> a good design and make it available for <b>reuse</b>.</p>
 </li>
 </ul></div>
 
@@ -2052,9 +2052,9 @@ pre.sourcecode .nt {
 </li>
 </ul></div>
 
-<p id="_b0643d80-d73f-19b9-8ad6-8491b09c137d">In addition, metadata elements defined by different profiles may be combined (<b>composition</b>)</p>
+<p id="_b0643d80-d73f-19b9-8ad6-8491b09c137d">In addition, metadata elements defined by different profiles may be combined (<b>composition</b>).</p>
 
-<p id="_a19a86c0-f243-a520-eaa7-2ffcb1ff2604">Finally, metadata specifications may be model and composed, but <b>bundled</b> into a single form for implementation convenience — such as JSON schema for OpenAPI 3.0 (3.1 does not require this as it follows more modern JSON schema)</p>
+<p id="_a19a86c0-f243-a520-eaa7-2ffcb1ff2604">Finally, metadata specifications may be model and composed, but <b>bundled</b> into a single form for implementation convenience — such as JSON schema for OpenAPI 3.0 (3.1 does not require this as it follows more modern JSON schema).</p>
 
 <p id="_c338beab-c44b-cab9-cd3d-b92985b7a897">And, since many systems have their own technology base, and metadata to describe re-use means legacy systems will be the source of much metadata, not single solution will hold universal sway, hence the <b>mappings</b> between standards will be a common concern.</p>
 
@@ -2071,9 +2071,9 @@ pre.sourcecode .nt {
 
 <div id="_key_recommendations"><h3 id="_8191cdd3-71f1-4dab-bda2-da7cba5e03dc"><a class="anchor" href="#_key_recommendations"></a><a class="header" href="#_key_recommendations">4.2.3.  Key Recommendations</a></h3>
 
-<div class="ul_wrap"><ul id="_e096b585-8f00-318e-0424-910c612e83ee"><li><p id="_cc3ec16e-2b2a-ad2f-b1cd-7aad66f32aa6">Explore alignment of metadata standards and development approaches using the framework to identify common approaches to different aspects where possible</p>
+<div class="ul_wrap"><ul id="_e096b585-8f00-318e-0424-910c612e83ee"><li><p id="_cc3ec16e-2b2a-ad2f-b1cd-7aad66f32aa6">Explore alignment of metadata standards and development approaches using the framework to identify common approaches to different aspects where possible.</p>
 </li>
-<li><p id="_53a7b169-921f-69e9-bdd7-6cb372d56ba0">publish mappings between metadata standards in a FAIR way.</p>
+<li><p id="_53a7b169-921f-69e9-bdd7-6cb372d56ba0">Publish mappings between metadata standards openly and FAIRly.</p>
 </li>
 </ul></div>
 </div>
@@ -2212,13 +2212,13 @@ Further research should focus on developing comprehensive geospatial FAIR metric
 
 <p id="_0119aade-df0c-4d41-7c09-09a70da77103">A draft JSON schema based on the W3C Provenance Vocabulary (PROV-O) was available for testing.</p>
 
-<p id="_c309779f-b51d-f514-733f-1d6331e04e5b">The following research questions</p>
+<p id="_c309779f-b51d-f514-733f-1d6331e04e5b">The following research questions were discussed:</p>
 
 <div class="ol_wrap"><ol type="1" id="_0bcbe4fb-1a1a-eb25-680d-2bc5fbd40498"><li id="_4eb9983b-2a68-41f3-ba51-616a272aedee"><p id="_8f89fb24-6072-021a-d637-25711de0eeb4">Can we create machine-readable provenance chains to enable scientific data re-creation?</p>
 </li>
 <li id="_cd373e62-9b7a-4d24-b850-24abc7c135ac"><p id="_9dafb6fc-ef11-1fd3-5c28-c98bdfc9af91">Can generate of such machine-readable provenance chains be automatable in scientific workflows?</p>
 </li>
-<li id="_34f6928c-b26c-4fc1-aa60-2b36ef9fd4fe"><p id="_e83014f9-368c-8cd7-57a4-54f6aacbbbf9">Can such provenance chains be exploited in current technology .</p>
+<li id="_34f6928c-b26c-4fc1-aa60-2b36ef9fd4fe"><p id="_e83014f9-368c-8cd7-57a4-54f6aacbbbf9">Can such provenance chains be exploited in current technology?</p>
 </li>
 </ol></div>
 </div></div><div id="conclusions"><h1 id="_c00ade98-fd3a-4f10-ab2f-2ce84f05ffd1"><a class="anchor" href="#conclusions"></a><a class="header" href="#conclusions">6.  Conclusions</a></h1><div id="_overview_3"><h2 id="_ac818a1f-803b-4daa-b09c-3a98c5ec56c2"><a class="anchor" href="#_overview_3"></a><a class="header" href="#_overview_3">6.1.  Overview</a></h2>
