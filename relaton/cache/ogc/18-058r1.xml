@@ -1,11 +1,11 @@
 <bibdata type="standard" schema-version="v1.2.9">
-  <fetched>2025-03-01</fetched>
+  <fetched>2025-06-09</fetched>
   <title type="title-intro" format="text/plain" language="en" script="Latn">OGC API</title>
   <title type="title-main" format="text/plain" language="en" script="Latn">Features</title>
   <title type="title-part" format="text/plain" language="en" script="Latn">Part 2: Coordinate Reference Systems by Reference corrigendum</title>
   <title type="main" format="text/plain" language="en" script="Latn">OGC API - Features - Part 2: Coordinate Reference Systems by Reference corrigendum</title>
   <uri type="src">http://www.opengis.net/doc/IS/ogcapi-features-2/1.0.1</uri>
-  <uri type="obp">https://docs.opengeospatial.org/is/18-058r1/18-058r1.html</uri>
+  <uri type="html">https://docs.opengeospatial.org/is/18-058r1/18-058r1.html</uri>
   <docidentifier type="OGC" primary="true">18-058r1</docidentifier>
   <date type="published">
     <on>2022-05-11</on>

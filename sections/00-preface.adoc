@@ -31,7 +31,8 @@ All questions regarding this document should be directed to the editors or the c
 |	Peter Parslow | ISO TC 211 | Contributor
 |	Ivana Ivanova | Curtin University | Contributor
 |	Panagiotis (Peter) A. Vretanos | CubeWerx Inc. | Contributor
-| to be completed... || All other contributors
+|   Christin Henzen | TU Dresden | Contributor
+|   Prof. Matt Duckham | RMIT  | Contributor
 |===
 
 
