@@ -10,7 +10,7 @@ The workshop discussion agreed on the following principles which help inform met
 - schemas must be available for the metadata elements being passed
 - description of those schemas are necessary, ideally as machine-readable semantics
 - this pattern of encapsulating metadata and references is well-known as a "provenance chain"
-- Provenenance chains will exhibit a DAG (Directed Acyclic Graph) as the same nodes may appear in multiple places
+- Provenance chains will exhibit a DAG (Directed Acyclic Graph) as the same nodes may appear in multiple places
 - Schemas etc for a DAG pattern are not trivial, hence it is critical to *encapsulate* a good design and make it available for *reuse*.
 
 In line with these principles, several activities focussed on the potential reusability of a PROV model using a formalised JSON schema. See <<records_prov_discussion>>
