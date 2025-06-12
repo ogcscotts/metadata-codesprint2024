@@ -71,7 +71,7 @@ Note that further work is required to characterise the ad-hoc "data" as persiste
 
 One team explored transparent mechanisms for annotating spatial data with metadata information as part of a semantic enrichment pipeline. 
 
-The team selected the creation of an up-to-date placenames knowledge graph for Australia as our case study, using the [placenames ontology](https://geoscienceaustralia.github.io/Placenames-Ontology/placenames.html) and the 2017 [FSDF placenames project](https://placenames.fsdf.org.au/) as inspiration. The approach can be thought of as an update of the Australian FSDF placenames project. Using [RML](https://rml.io/) (RDF Mapping Language) the team created RML mappings for each state from JSON and CSV gazetteer data, following rules set out in the placename ontology. 
+The team selected the creation of an up-to-date placenames knowledge graph for Australia as our case study, using the https://geoscienceaustralia.github.io/Placenames-Ontology/placenames.html[placenames ontology] and the 2017 https://placenames.fsdf.org.au/[FSDF placenames project] as inspiration. The approach can be thought of as an update of the Australian FSDF placenames project. Using https://rml.io/[RML] (RDF Mapping Language) the team created RML mappings for each state from JSON and CSV gazetteer data, following rules set out in the placename ontology.
 
 The results demonstrated the potential for RML can be used to support transparent uplift of data with standards-based as an integral part of the semantic data enrichment pipeline. The key advantage of RML as a tool for this purpose is it enables the definition of sophisticated and standards-based logic for enrichment, separated from the mechanism for enrichment.  
 

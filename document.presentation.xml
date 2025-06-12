@@ -660,7 +660,7 @@ For the purposes of this document, the terms and definitions given in % and the 
 <semantic__title>Semantic spatial data enrichment</semantic__title>
 <semantic__p id="semantic___8bcfcf92-8bdf-2fb7-709a-839ec39faed8">One team explored transparent mechanisms for annotating spatial data with metadata information as part of a semantic enrichment pipeline.</semantic__p>
 
-<semantic__p id="semantic___8cb6283b-ee37-0bfb-ac6c-30dec608de2c">The team selected the creation of an up-to-date placenames knowledge graph for Australia as our case study, using the [placenames ontology](<semantic__link target="https://geoscienceaustralia.github.io/Placenames-Ontology/placenames.html"/>) and the 2017 [FSDF placenames project](<semantic__link target="https://placenames.fsdf.org.au/"/>) as inspiration. The approach can be thought of as an update of the Australian FSDF placenames project. Using [RML](<semantic__link target="https://rml.io/"/>) (RDF Mapping Language) the team created RML mappings for each state from JSON and CSV gazetteer data, following rules set out in the placename ontology.</semantic__p>
+<semantic__p id="semantic___a1b7a031-9254-550c-d0a7-6c533e55e31e">The team selected the creation of an up-to-date placenames knowledge graph for Australia as our case study, using the <semantic__link target="https://geoscienceaustralia.github.io/Placenames-Ontology/placenames.html">placenames ontology</semantic__link> and the 2017 <semantic__link target="https://placenames.fsdf.org.au/">FSDF placenames project</semantic__link> as inspiration. The approach can be thought of as an update of the Australian FSDF placenames project. Using <semantic__link target="https://rml.io/">RML</semantic__link> (RDF Mapping Language) the team created RML mappings for each state from JSON and CSV gazetteer data, following rules set out in the placename ontology.</semantic__p>
 
 <semantic__p id="semantic___65847325-2fd5-bc9c-bbb6-6b130731b623">The results demonstrated the potential for RML can be used to support transparent uplift of data with standards-based as an integral part of the semantic data enrichment pipeline. The key advantage of RML as a tool for this purpose is it enables the definition of sophisticated and standards-based logic for enrichment, separated from the mechanism for enrichment.</semantic__p>
 
@@ -1615,8 +1615,8 @@ sourcecode .nt {
 <feedback-statement>
 
 </feedback-statement>
-</boilerplate><preface><clause type="toc" id="_a1064aa5-03c2-474b-a8aa-8ad073a390f8" displayorder="1"><title depth="1">Contents</title></clause>
-<clause id="_66ab4266-ffd4-49b5-b72e-d4fd35774e88" type="keywords" displayorder="2">
+</boilerplate><preface><clause type="toc" id="_53f66391-9f0f-49ff-a78c-10138271b692" displayorder="1"><title depth="1">Contents</title></clause>
+<clause id="_3250294a-2296-4856-8572-b6ff0ae4ca86" type="keywords" displayorder="2">
 <title depth="1">I.<tab/>Keywords</title>
 <p>The following are keywords to be used by search engines and document catalogues.</p>
 <p>metadata, GeoDCAT, 19115, Records, STAC, Provenance, Building Blocks</p></clause>
@@ -1652,7 +1652,7 @@ sourcecode .nt {
 </clause>
 </foreword><clause type="security" id="_1bfba592-0713-41de-d69c-a83eb10efc35" obligation="informative" displayorder="4">
   <title depth="1">III.<tab/>Security considerations</title>
-  <p id="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a">No security considerations have been made for this document.</p></clause><clause id="_d16951ba-24df-4078-8a9d-5eef0b51fc76" type="submitting_orgs" displayorder="5">
+  <p id="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a">No security considerations have been made for this document.</p></clause><clause id="_1a73cfbf-0bac-4396-be77-5634b6779977" type="submitting_orgs" displayorder="5">
 <title depth="1">IV.<tab/>Submitting Organizations</title>
 <p>The following organizations submitted this Document to the Open Geospatial Consortium (OGC):</p>
  <ul><li>OGC</li>
@@ -2154,7 +2154,7 @@ sourcecode .nt {
 <title depth="3">4.5.2.<tab/>Semantic spatial data enrichment</title>
 <p id="_8bcfcf92-8bdf-2fb7-709a-839ec39faed8">One team explored transparent mechanisms for annotating spatial data with metadata information as part of a semantic enrichment pipeline.</p>
 
-<p id="_8cb6283b-ee37-0bfb-ac6c-30dec608de2c">The team selected the creation of an up-to-date placenames knowledge graph for Australia as our case study, using the [placenames ontology](<link target="https://geoscienceaustralia.github.io/Placenames-Ontology/placenames.html"/>) and the 2017 [FSDF placenames project](<link target="https://placenames.fsdf.org.au/"/>) as inspiration. The approach can be thought of as an update of the Australian FSDF placenames project. Using [RML](<link target="https://rml.io/"/>) (RDF Mapping Language) the team created RML mappings for each state from JSON and CSV gazetteer data, following rules set out in the placename ontology.</p>
+<p id="_a1b7a031-9254-550c-d0a7-6c533e55e31e">The team selected the creation of an up-to-date placenames knowledge graph for Australia as our case study, using the <link target="https://geoscienceaustralia.github.io/Placenames-Ontology/placenames.html">placenames ontology</link> and the 2017 <link target="https://placenames.fsdf.org.au/">FSDF placenames project</link> as inspiration. The approach can be thought of as an update of the Australian FSDF placenames project. Using <link target="https://rml.io/">RML</link> (RDF Mapping Language) the team created RML mappings for each state from JSON and CSV gazetteer data, following rules set out in the placename ontology.</p>
 
 <p id="_65847325-2fd5-bc9c-bbb6-6b130731b623">The results demonstrated the potential for RML can be used to support transparent uplift of data with standards-based as an integral part of the semantic data enrichment pipeline. The key advantage of RML as a tool for this purpose is it enables the definition of sophisticated and standards-based logic for enrichment, separated from the mechanism for enrichment.</p>
 
@@ -2277,11 +2277,11 @@ rr:subjectMap [
 
 <p id="_0a54ff41-12ba-f96c-201b-481812b59ef9">This has three significant implications for considering metadata standardisation:</p>
 
-<ol id="_ee51812b-142d-1ace-5559-46bd990b45ac" type="arabic"><li id="_5469e294-280a-4217-a10a-9ef48f065489" label="1"><p id="_8502b707-1026-a26f-5ad2-95bb3ea93e68">A rich provenance model can be handled with current reference implementation software and hence there is no substantial technical barrier</p>
+<ol id="_ee51812b-142d-1ace-5559-46bd990b45ac" type="arabic"><li id="_f4dfc8dd-12a6-4e70-a01e-8b8de1581f29" label="1"><p id="_8502b707-1026-a26f-5ad2-95bb3ea93e68">A rich provenance model can be handled with current reference implementation software and hence there is no substantial technical barrier</p>
 </li>
-<li id="_909a3ce8-45b3-4cc4-b594-ff3c7852da86" label="2"><p id="_b65e86b4-1daf-2783-d5ff-b13680c8f320">Well-known metadata extensions can be supported using well-known attachment properties, which will be necessary for each object type (record, feature etc)</p>
+<li id="_ae641172-55f1-496e-b7db-4daaded8e3c8" label="2"><p id="_b65e86b4-1daf-2783-d5ff-b13680c8f320">Well-known metadata extensions can be supported using well-known attachment properties, which will be necessary for each object type (record, feature etc)</p>
 </li>
-<li id="_18a18506-cec3-446e-8241-e0701ac12566" label="3"><p id="_a27403eb-1f17-8a8e-8921-46ef70493ff2">Well-known schemas will be required to to allow predictable behaviour given the inherent complexity of some types of metadata.</p>
+<li id="_5ec8120a-5abb-4e28-a727-196c48736596" label="3"><p id="_a27403eb-1f17-8a8e-8921-46ef70493ff2">Well-known schemas will be required to to allow predictable behaviour given the inherent complexity of some types of metadata.</p>
 </li>
 </ol>
 
@@ -2345,11 +2345,11 @@ rr:subjectMap [
 
 <p id="_c309779f-b51d-f514-733f-1d6331e04e5b">The following research questions</p>
 
-<ol id="_0bcbe4fb-1a1a-eb25-680d-2bc5fbd40498" type="arabic"><li id="_87de652e-48b8-4d9d-9268-6ade770f04f0" label="1"><p id="_8f89fb24-6072-021a-d637-25711de0eeb4">Can we create machine-readable provenance chains to enable scientific data re-creation?</p>
+<ol id="_0bcbe4fb-1a1a-eb25-680d-2bc5fbd40498" type="arabic"><li id="_1a40a85f-0335-4c95-8994-10f02e71e341" label="1"><p id="_8f89fb24-6072-021a-d637-25711de0eeb4">Can we create machine-readable provenance chains to enable scientific data re-creation?</p>
 </li>
-<li id="_30c22588-c896-4ff0-880f-a33267e67194" label="2"><p id="_9dafb6fc-ef11-1fd3-5c28-c98bdfc9af91">Can generate of such machine-readable provenance chains be automatable in scientific workflows?</p>
+<li id="_93643dfe-bc29-4456-ac2a-517f9ae25132" label="2"><p id="_9dafb6fc-ef11-1fd3-5c28-c98bdfc9af91">Can generate of such machine-readable provenance chains be automatable in scientific workflows?</p>
 </li>
-<li id="_a845c08c-299d-447d-9cb0-cb2f1c37dce9" label="3"><p id="_e83014f9-368c-8cd7-57a4-54f6aacbbbf9">Can such provenance chains be exploited in current technology .</p>
+<li id="_d2156e0b-d6d3-40c6-9bcc-67ec44279f62" label="3"><p id="_e83014f9-368c-8cd7-57a4-54f6aacbbbf9">Can such provenance chains be exploited in current technology .</p>
 </li>
 </ol>
 </clause>
