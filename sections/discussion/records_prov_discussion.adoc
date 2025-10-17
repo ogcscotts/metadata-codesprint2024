@@ -11,5 +11,4 @@ The following research questions
 . Can we create machine-readable provenance chains to enable scientific data re-creation?
 . Can generate of such machine-readable provenance chains be automatable in scientific workflows?
 . Can such provenance chains be exploited in current technology
-.
 

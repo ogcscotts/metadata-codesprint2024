@@ -3,11 +3,11 @@
 
 === Overview
 
-As illustrated in <<img_architecture>>, the sprint architecture is somewhat loose - to identify what aspects of metadata standardisation the community considers necessary, but also to explore the commonalities and principles that can be discovered from current activities.
+As illustrated in <<img_architecture>>, the sprint architecture is somewhat loose - to identify what aspects of metadata standardization the community considers necessary, but also to explore the commonalities and principles that can be discovered from current activities.
 
-It was not assumed that specific standards could be developed not tested thoroughly, however the general principle of extending multiple metadata standards with extensions based on common models was prioritised, with a focus on Provenance.  Provenance represents a complex challenge with a well-known conceptual model, so testing if a solution to this complex challenge can be successfully re-used provides clear direction to the problems of extending metadata standards for any specific aspects.
+It was not assumed that specific standards could be developed not tested thoroughly, however the general principle of extending multiple metadata standards with extensions based on common models was prioritized, with a focus on Provenance.  Provenance represents a complex challenge with a well-known conceptual model, so testing if a solution to this complex challenge can be successfully re-used provides clear direction to the problems of extending metadata standards for any specific aspects.
 
-The key *methodology* used was the testing of examples based on prior work to model a reusable JSON schema for PROV-O with a ready-to-use JSON-LD semantic mapping, thus encapsulating a complex problem to make implementation feasible. Some codesprint activities tested the feasibility of re-use of such an extension.
+The key *methodology* used was the testing of examples based on prior work to model a reusable JSON schema for PROV-O with a ready-to-use JSON-LD semantic mapping, thus encapsulating a complex problem to make implementation feasible. Some code sprint activities tested the feasibility of re-use of such an extension.
 
 [[img_architecture]]
 .High Level Overview of the Sprint Architecture

@@ -5,7 +5,7 @@ Two teams explored the capture of provenance from "GeoAI" workflows.
 
 <<img_xai>> shows the target for a workflow based on the LangFlow toolkit, based on the open source Apache AirFlow tools.
 
-Within the limited time available in the codesprint it was shown that generating a provenance trace that conformed to the proposed standardised schema was achievable.  It was not feasible within the same limited time to learn and implement OGC API Processes, however another participant has demonstrated this is feasible as part of work on DGGS APIs.
+Within the limited time available in the code sprint it was shown that generating a provenance trace that conformed to the proposed standardized schema was achievable.  It was not feasible within the same limited time to learn and implement OGC API Processes, however another participant has demonstrated this is feasible as part of work on DGGS APIs.
 
 [[img_xai]]
 .Architecture to generate OGC API Records with Provenance from AI processes.
@@ -65,7 +65,7 @@ An example of the output of one such workflow is here:
 }
 ----
 
-Note that further work is required to characterise the ad-hoc "data" as persisted data sets, described using OGC API Records schemas. The main challenge in this case is establishment of persistent identifiers, however the schema supports such ad-hoc inline content options.
+Note that further work is required to characterize the ad-hoc "data" as persisted data sets, described using OGC API Records schemas. The main challenge in this case is establishment of persistent identifiers, however the schema supports such ad-hoc inline content options.
 
 ==== Semantic spatial data enrichment
 

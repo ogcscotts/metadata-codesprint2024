@@ -11,7 +11,7 @@ after the abstract
 
 === Acknowledgements
 
-OGC thanks the following organisations for material support for this codesprint:
+OGC thanks the following organizations for material support for this Code Sprint:
 
 - [University of NSW School of the Built Environment, Geospatial Research Innovation Development (UNSW GRID)](https://www.unsw.edu.au/arts-design-architecture/our-schools/built-environment/our-research/clusters-groups/grid) for the venue and logistics.
 - [AURIN](https://aurin.org.au/) and [SURROUND Australia](https://surroundaustralia.com/) for catering.
@@ -38,7 +38,7 @@ All questions regarding this document should be directed to the editors or the c
 
 [.abstract]
 === Abstract
-The Metadata Code Sprint was planned to have a primary focus on the following group of tools, APIs and encodings:
+The Metadata Code Sprint was planned to have a primary focus on the following group of tools, APIs and encodings.
 
 OGC GeoDCAT  – (under development) a spatio-temporal profile of the W3C DCAT Recommendation DCAT, and provide guidance about its use and further specialization. OGC GeoDCAT is inspired by the GeoDCAT-AP specification but defines just the internationally relevant concepts to allow wider application. The key areas to consider are around the expression of place and time, such as GeoDCAT-AP properties-for-location
 

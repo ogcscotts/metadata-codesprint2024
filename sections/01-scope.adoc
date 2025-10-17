@@ -3,25 +3,26 @@
 
 === Summary
 
-OGC Code Sprints experiment with emerging ideas in the context of geospatial Standards and help improve interoperability of existing Standards by experimenting with new extensions or profiles. They are also used for building proofs-of-concept to support standards development activities and the enhancement of software products. The nature of the activities is influenced by whether a code sprint is 'generic' or 'focused'. All OGC working groups are invited and encouraged to set up a thread in generic code sprints, whereas focused code sprints are tailored to a specific set of standards (typically limited to three standards).
+OGC Code Sprints experiment with emerging ideas in the context of geospatial Standards and help improve interoperability of existing Standards by experimenting with new extensions or profiles. They are also used for building proofs-of-concept to support standards development activities and the enhancement of software products. The nature of the activities is influenced by whether a code sprint is 'generic' or 'focused.' All OGC working groups are invited and encouraged to set up a thread in generic code sprints, whereas focused code sprints are tailored to a specific set of standards (typically limited to three standards).
 
-In the case of "metadata", this is a ubiquitous concept with a long and varied tradition of handling metadata in many places, catalogs of "data set descriptions", embedded in data objects, documented in specifications for such data, attached to deployments of services to serve or utilise data etc.  Each technology and each domain of application has its own legacy and natural strengths and weaknesses.  This code sprint will examine some of the common patterns and overarching needs in an endeavour to improve and extend various OGC metadata approaches.
+In the case of "metadata", this is a ubiquitous concept with a long and varied tradition of handling metadata in many places, catalogs of "data set descriptions", embedded in data objects, documented in specifications for such data, attached to deployments of services to serve or utilize data etc.  Each technology and each domain of application has its own legacy and natural strengths and weaknesses.  This code sprint will examine some of the common patterns and overarching needs in an endeavour to improve and extend various OGC metadata approaches.
 
 This paper presents the high-level architecture of the code sprint and describes each of the standards and software packages that were deployed in support of the code sprint. The paper also discusses the results and presents a set of conclusions and recommendations. The recommendations identify ideas for future work, some of which may be more appropriate for testbeds, pilots, or other types of OGC initiatives. Therefore, the reader is encouraged to consider the recommended future work within the context of all OGC Standards development, collaborative solutions, and innovation activities.
 
 The idea is to determine and demonstrate where and when different standards (particularly STAC, OGC API records, ISO 19115, and GeoDCAT) can be used  to provide the most relevant information to the right users at the right time. The goal is to demonstrate how the same concepts may be handled by different options, whilst supporting existing communities of practices to extend and profile their chosen approaches.
 
-OGC will provide an open source framework for testing mappings between standards, using test case examples covering Records, STAC and DCAT. Code sprint participants would be able to extend this to XML based metadata standards such as ISO 19115, in a way that is extensible to various profiles in use. This could leverage skills in any or all of coding, datamodelling, metadata standards or application domain requirements.
+OGC will provide an open source framework for testing mappings between standards, using test case examples covering Records, STAC and DCAT. Code sprint participants would be able to extend this to XML based metadata standards such as ISO 19115, in a way that is extensible to various profiles in use. This could leverage skills in any or all of coding, data modeling, metadata standards, or application domain requirements.
 
 Potential scope from an ISO TC 211 perspective includes canvassing for views on what could be useful in regards to an upcoming revision of ISO 19115-1:2014, including the potential for a formal document on how to map ISO 19115-1 to DCAT, or perhaps a new version of ISO 19115-1 restructured using the DCAT terms and structure, with the intention of aligning the encoding of ISO 19115-1 with one or more encodings of DCAT.  Similarly, is there user demand for an RDF/XML and/or OWL "encoding" of ISO 19115-1 in an official or recommended form?
 
-More specifically, in terms of a specific "code sprint" activity on 19115, potential foci could look to define and exercise the "mapping" - this could be done several ways and the GeoDCAT Building Blocks can be used to execute, test and publish these mappings. Five options worthy of consideration:
+More specifically, in terms of a specific "code sprint" activity on 19115, potential foci could look to define and exercise the "mapping" - this could be done several ways and the GeoDCAT Building Blocks can be used to execute, test and publish these mappings. Five options are worthy of consideration.
 
-XML->JSON using existing libraries and JSON-LD uplift (often this needs an intermediate transform)
-19115 UML -> JSON schema and OWL using Shapechange, and JSON-LD uplift (bonus marks to make shapechencge generate the JSON-LD mapping) - and transforms from 19115 OWL to GeoDCAT.
-Use existing transform languages and libraries designed for relational->RDF mapping such as R2RML
-custom scripts taking a mapping table and generating or incorporating custom translation code per element
-Take a 19115 -> OGC Records mapping and use the Records->DCAT mapping under development
+. XML->JSON using existing libraries and JSON-LD uplift (often this needs an intermediate transform);
+. 19115 UML -> JSON schema and OWL using Shapechange, and JSON-LD uplift (bonus marks to make shapechencge generate the JSON-LD mapping) - and transforms from 19115 OWL to GeoDCAT;
+. Use existing transform languages and libraries designed for relational->RDF mapping such as R2RML;
+. Custom scripts taking a mapping table and generating or incorporating custom translation code per element; and
+. Take a 19115 -> OGC Records mapping and use the Records->DCAT mapping under development.
+
 Note that option 4 could be used to generate the transforms for 1,2 or 5. Option 5 will be most OGC API friendly solution.
 
 Similarly, ISO TC 211 - working group 7 - Information Communities, is developing a JSON implementation of the 19115 metadata-standard, the 19115-4, Geographic information — Metadata — Part 4: JSON schema implementation of metadata fundamentals, and are looking for help on creating a GeoJSON schema.
@@ -30,44 +31,37 @@ The approach: 19115-1 and 19157-1 (data quality) are in scope and encoding will 
 A comprehensive XML 'real life' dataset has been created and converted to a GeoJSON preferred encoding.
 The GeoJSON example dataset is a subset (profile) of 19115-1 and 19157-1, but is considered to cover the essential part and is considered as the requirements that are set for the GeoJSON schema, with development pending resource allocation, ultimately resulting in the generation of a GeoJSON schema based on the dataset and UML model.
 
+The Code Sprint worked toward the following outputs.
 
-Specific case studies with engagement in the first session included: #17 TITLE NEEDED?
+* GeoDCAT profile for PROV using LangChain workflow examples - extending and/or maturing the [existing Records-PROV Building Block - work in progress] (https://ogcincubator.github.io/geodcat-ogcapi-records/bblock/ogc.geo.geodcat.geodcat-records-prov) - note for a start this can simply demonstrate use of the generic PROV pattern supported with real workflow examples.
+* Define a new Building Block PROV-AI profile for AI defining types of activities, using TrainingML.
+* GeoDCAT+PROV-AI profile (richer version of first with full description of activity and training set specifics.
+* Code for generic AirFlow components to capture provenance - wrappers for existing components?
+* Code for LangFlow to capture specific provenance details.
+* OGCAPI-Processess profile for including PROV (draft to be available for review and testing).
+* Code for AirFlow to generate OGC API Processess interface to export output and provenance.
+* STAC and OGC API Records extension/profiles for PROV-AI - building on STAC-PROV extension.
+* Examples and mappings for STAC as a profile of OGC-API Records mapped to DCAT - linking GeoDCAT-PROV to STAC-PROV and Records-PROV.
+* Code for AirFlow to generate STAC or Records metadata traces for generated objects.
+* Code for AirFlow to import STAC or Records metadata traces for referenced data objects and attach to the generated provenance trace.
+* Extend existing Code for PyGeoAPI to deliver Records with PROV profile.
+* Extend any OGC Records or STAC client to display provenance information.
+* Extend and OGC Records or STAC editor to display and manage provenance information.
 
-Another goal under consideration is to move the Geonetwork 4 FormatterAPI, as well as all its support, over to Geonetwork 5 via a set of XSLTs that take the underlying ISO XML documents and output DCAT-AP (country specific) XML RDF files, which is already working in Geonetwork 4, which will provide records infrastructure access to all of Geonetwork's output formats (more than just DCAT).
-
-XAI- OGC API Processes for RAG/LLM using GeoDCAT and PROV #18
-The LangFlow toolkit uses Apache Airflow to define and run workflows using the LangChain toolkit. If such a workflow used or generated geospatial information sources, then wrapping it in OGC API Processess, and capturing details of the source, output and training data usage using the PROV model makes sense to integrate into spatial systems.
-
-Potential codesprint outputs:
-
-GeoDCAT profile for PROV using LangChain workflow examples - extending and/or maturing the [existing Records-PROV Building Block - work in progress] (https://ogcincubator.github.io/geodcat-ogcapi-records/bblock/ogc.geo.geodcat.geodcat-records-prov) - note for a start this can simply demonstrate use of the generic PROV pattern supported with real workflow examples.
-Define a new Building Block PROV-AI profile for AI defining types of activities, using TrainingML
-GeoDCAT+PROV-AI profile (richer version of first with full description of activity and training set specifics
-Code for generic AirFlow components to capture provenance - wrappers for existing components?
-Code for LangFlow to capture specific provenance details
-OGCAPI-Processess profile for including PROV (draft to be available for review and testing)
-Code for AirFlow to generate OGC API Processess interface to export output and provenance
-STAC and OGC API Records extension/profiles for PROV-AI - building on STAC-PROV extension
-Examples and mappings for STAC as a profile of OGC-API Records mapped to DCAT - linking GeoDCAT-PROV to STAC-PROV and Records-PROV
-Code for AirFlow to generate STAC or Records metadata traces for generated objects
-Code for AirFlow to import STAC or Records metadata traces for referenced data objects and attach to the generated provenance trace
-extend existing Code for PyGeoAPI to deliver Records with PROV profile
-extend any OGC Records or STAC client to display provenance information
-extend and OGC Records or STAC editor to display and manage provenance information
-These are all fairly small individually - but publishing the profiles as Building Blocks - or testing existing ones with these scenarios - ensures a output that can be built upon systematically, so any combination of the tasks has value to progress GeoDCAT and OGC APIs as an interoperability framework for XGeoAI - "Explainable AI for Geospatial".
+These outputs are all fairly small individually - but publishing the profiles as Building Blocks - or testing existing ones with these scenarios - ensures a output that can be built upon systematically, so any combination of the tasks has value to progress GeoDCAT and OGC APIs as an interoperability framework for XGeoAI - "Explainable AI for Geospatial."
 
 
 
-=== Motivating Use Case:  Data Format and Validation Service For Interoperability Between Analytics and Data
+=== Motivating Use Case: Data Format and Validation Service For Interoperability Between Analytics and Data
 
 The following concept was submitted by AURIN, as an e-Research infrastructure provider.
 
 
-_As systems become more complicated, and a system of systems approach becomes the norm rather than the dream, it's important that datasets and containerised analytics to be able declare, trust, and verify that data meets certain assertions and standards. AURIN has been contemplating an idea for building a Data Format and Validation Registry, first internally and then externally, that would mix persistent identifiers, human readable data assertions, and machine readable and executable assertions on data formats to add an automated "trust, with verification" layer to their data/analytics ecosystem.
+_As systems become more complicated, and a system of systems approach becomes the norm rather than the dream, it's important that datasets and containerised analytics to be able declare, trust, and verify that data meets certain assertions and standards. AURIN has been contemplating an idea for building a Data Format and Validation Registry, first internally and then externally, that would mix persistent identifiers, human readable data assertions, and machine readable and executable assertions on data formats to add an automated "trust, with verification" layer to their data/analytics ecosystem._
 
-The basic sketch would be to have a minted persistent identifier (similar to a DOI or an ORCID) of a description that links to a human readable and machine readable page describing what this data format is and what assertions data would have to meet to be considered valid. A preliminary prototype of the service could have a sort of standard DOI type link that would resolve to a page with human readable metadata about the data format, and then validation scripts or attached assertions in a validation language, such as Great Expectations, or similar.
+_The basic sketch would be to have a minted persistent identifier (similar to a DOI or an ORCID) of a description that links to a human readable and machine readable page describing what this data format is and what assertions data would have to meet to be considered valid. A preliminary prototype of the service could have a sort of standard DOI type link that would resolve to a page with human readable metadata about the data format, and then validation scripts or attached assertions in a validation language, such as Great Expectations, or similar._
 
-The challenge, beyond vetting the approach is to think about what metadata should be provided on the other end of that "format persistent identifier" link that would allow for a service to independently and automatically verify that a dataset complies with the standard it claims to adhere to._
+_The challenge, beyond vetting the approach is to think about what metadata should be provided on the other end of that "format persistent identifier" link that would allow for a service to independently and automatically verify that a dataset complies with the standard it claims to adhere to._
 
-This challenge is open-ended to an extent, however the <<metadata_framework>> articulated during the code sprint provides a basis for designing such a metadata capability in a scalable, sustainable fashion using fit-for-purpose standardised components.  The completed exercises using Provenance as such a component highlight the feasibility of having semantically rich components combined with OGC and ISO "base" standards.
+This challenge is open-ended to an extent, however the <<metadata_framework>> articulated during the code sprint provides a basis for designing such a metadata capability in a scalable, sustainable fashion using fit-for-purpose standardized components.  The completed exercises using Provenance as such a component highlight the feasibility of having semantically rich components combined with OGC and ISO "base" standards.
 
